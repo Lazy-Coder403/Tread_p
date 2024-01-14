@@ -1,1 +1,2 @@
-Prototype v.0.0
+Racing game prototype.
+Godot 4.0
