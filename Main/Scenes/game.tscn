@@ -1,0 +1,72 @@
+[gd_scene load_steps=12 format=3 uid="uid://dv1nsn6ghnh5w"]
+
+[ext_resource type="Texture2D" uid="uid://c848e4e6rssyt" path="res://Main/Textures/Background/kloofendal_43d_clear_puresky_4k.exr" id="1_c8cos"]
+[ext_resource type="Texture2D" uid="uid://cucye43u4hlqu" path="res://Main/Textures/Tiles/smooth-sand-1024x1024.png" id="2_sufem"]
+[ext_resource type="PackedScene" uid="uid://drecw3lhji1bg" path="res://Addons/Scenes/shelbygt_500.tscn" id="4_6rqvk"]
+[ext_resource type="PackedScene" uid="uid://bwhfimovg3ocr" path="res://Main/Scenes/track.tscn" id="4_prc1n"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_spw3q"]
+panorama = ExtResource("1_c8cos")
+
+[sub_resource type="Sky" id="Sky_iufrl"]
+sky_material = SubResource("PanoramaSkyMaterial_spw3q")
+radiance_size = 5
+
+[sub_resource type="Environment" id="Environment_n42bp"]
+background_mode = 2
+background_energy_multiplier = 2.0
+sky = SubResource("Sky_iufrl")
+sky_rotation = Vector3(0, 0.0610865, 0)
+ambient_light_color = Color(1, 0.517647, 0.0352941, 0.67451)
+ssr_enabled = true
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_us1fi"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hsc3k"]
+albedo_color = Color(0.717647, 0.462745, 0.239216, 1)
+albedo_texture = ExtResource("2_sufem")
+uv1_triplanar = true
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_tfvfd"]
+lightmap_size_hint = Vector2i(500002, 500002)
+material = SubResource("StandardMaterial3D_hsc3k")
+size = Vector2(100000, 100000)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_ox44e"]
+data = PackedVector3Array(50000, 0, 50000, -50000, 0, 50000, 50000, 0, -50000, -50000, 0, 50000, -50000, 0, -50000, 50000, 0, -50000)
+
+[node name="Game" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.25262, 0)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_n42bp")
+camera_attributes = SubResource("CameraAttributesPractical_us1fi")
+
+[node name="Lighting" type="Node3D" parent="."]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Lighting"]
+transform = Transform3D(-0.847122, -0.230446, -0.478831, 0, -0.901077, 0.433659, -0.531399, 0.367362, 0.763322, 0, 415, 1373.45)
+light_color = Color(0.831373, 0.627451, 0.47451, 1)
+light_energy = 2.0
+light_indirect_energy = 100.0
+light_volumetric_fog_energy = 100.0
+shadow_enabled = true
+shadow_blur = 0.75
+directional_shadow_split_1 = 0.62
+directional_shadow_split_2 = 0.54
+sky_mode = 1
+
+[node name="Plane" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.29741, 0)
+mesh = SubResource("PlaneMesh_tfvfd")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Plane"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Plane/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_ox44e")
+
+[node name="Track" parent="." instance=ExtResource("4_prc1n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -126.544, -9.53674e-07, 24.0633)
+
+[node name="shelbygt500" parent="." instance=ExtResource("4_6rqvk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -222.62, 4.61193, 7.45227)
