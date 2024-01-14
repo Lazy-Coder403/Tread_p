@@ -1,2 +1,1 @@
-Racing game prototype.
-Godot 4.0
+Tread is a Racing game prototype.
