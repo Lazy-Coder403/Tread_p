@@ -1,9 +1,20 @@
-[gd_scene load_steps=12 format=3 uid="uid://dv1nsn6ghnh5w"]
+[gd_scene load_steps=40 format=3 uid="uid://dv1nsn6ghnh5w"]
 
 [ext_resource type="Texture2D" uid="uid://c848e4e6rssyt" path="res://Main/Textures/Background/kloofendal_43d_clear_puresky_4k.exr" id="1_c8cos"]
 [ext_resource type="Texture2D" uid="uid://cucye43u4hlqu" path="res://Main/Textures/Tiles/smooth-sand-1024x1024.png" id="2_sufem"]
 [ext_resource type="PackedScene" uid="uid://drecw3lhji1bg" path="res://Addons/Scenes/shelbygt_500.tscn" id="4_6rqvk"]
 [ext_resource type="PackedScene" uid="uid://bwhfimovg3ocr" path="res://Main/Scenes/track.tscn" id="4_prc1n"]
+[ext_resource type="Texture2D" uid="uid://dum0jv6dx1v77" path="res://Addons/textures/start.jpg" id="5_bs7tf"]
+[ext_resource type="AudioStream" uid="uid://6715hsrsrtnh" path="res://Addons/music/Basic_Industrial_Run.mp3" id="5_fmvky"]
+[ext_resource type="PackedScene" uid="uid://cs6fj5adx5fsk" path="res://Addons/Models/Misc/golden oasis buildings and props.glb" id="6_2olcf"]
+[ext_resource type="Texture2D" uid="uid://cpski76unel5b" path="res://Addons/textures/billboard.png" id="7_2uwsa"]
+[ext_resource type="Texture2D" uid="uid://c6t0u3imu8ipc" path="res://Addons/Models/Misc/textures/skyscraper_pack/building_04.png" id="9_ojhsd"]
+[ext_resource type="Texture2D" uid="uid://dpofg5h6f4qrl" path="res://Addons/textures/water storage.jpg" id="10_3m8er"]
+[ext_resource type="Texture2D" uid="uid://cnsvtpk2o4li" path="res://Addons/Models/Misc/textures/skyscraper_pack/building_08.png" id="10_hl618"]
+[ext_resource type="Texture2D" uid="uid://bo5tnipbbx2t2" path="res://Addons/textures/pavement.jpg" id="12_ecfot"]
+[ext_resource type="Texture2D" uid="uid://veg0hlu87kdh" path="res://Addons/textures/gas shop.jpg" id="13_7q8mf"]
+[ext_resource type="Texture2D" uid="uid://bmytgws7a1eef" path="res://Addons/textures/gas billboard.png" id="13_cemj7"]
+[ext_resource type="Texture2D" uid="uid://bvxctuj44ol55" path="res://Addons/textures/gas pump.jpg" id="15_v8n8x"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_spw3q"]
 panorama = ExtResource("1_c8cos")
@@ -34,6 +45,67 @@ size = Vector2(100000, 100000)
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_ox44e"]
 data = PackedVector3Array(50000, 0, 50000, -50000, 0, 50000, 50000, 0, -50000, -50000, 0, 50000, -50000, 0, -50000, 50000, 0, -50000)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y67wj"]
+albedo_texture = ExtResource("9_ojhsd")
+uv1_scale = Vector3(0.46, 0.46, 0.46)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5yejx"]
+albedo_texture = ExtResource("10_hl618")
+uv1_scale = Vector3(1.395, -0.425, 1.34)
+uv1_offset = Vector3(0.34, -0.045, 0.055)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ag1b7"]
+albedo_texture = ExtResource("10_3m8er")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oe4nn"]
+albedo_texture = ExtResource("10_3m8er")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_re8n2"]
+albedo_texture = ExtResource("10_3m8er")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nlddu"]
+albedo_texture = ExtResource("10_3m8er")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2f1hn"]
+albedo_texture = ExtResource("10_3m8er")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hxeut"]
+albedo_texture = ExtResource("10_3m8er")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_slvja"]
+albedo_texture = ExtResource("10_3m8er")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cniim"]
+albedo_texture = ExtResource("12_ecfot")
+uv1_scale = Vector3(6.745, 8.575, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pqolh"]
+albedo_color = Color(1, 0.180392, 0.00784314, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_drgx1"]
+albedo_texture = ExtResource("13_7q8mf")
+uv1_scale = Vector3(0.5, 0.29, 1)
+uv1_offset = Vector3(0.21, 0.65, 0)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3s6vw"]
+albedo_color = Color(1, 0.180392, 0.00784314, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jhjtf"]
+albedo_color = Color(1, 0.180392, 0.00784314, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4pr0o"]
+albedo_color = Color(1, 0.180392, 0.00784314, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4waa8"]
+albedo_texture = ExtResource("15_v8n8x")
+uv1_scale = Vector3(0.175, 1, 1)
+uv1_offset = Vector3(0.16, 0, 0)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_16qmq"]
+albedo_texture = ExtResource("15_v8n8x")
+uv1_scale = Vector3(0.255, 1, 1)
+uv1_offset = Vector3(0.135, 0, 0)
 
 [node name="Game" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.25262, 0)
@@ -69,4 +141,369 @@ shape = SubResource("ConcavePolygonShape3D_ox44e")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -126.544, -9.53674e-07, 24.0633)
 
 [node name="shelbygt500" parent="." instance=ExtResource("4_6rqvk")]
-transform = Transform3D(0.275386, 0, 0.961334, 0, 1, 0, -0.961334, 0, 0.275386, -286.762, 6.18457, -583.19)
+transform = Transform3D(0.275386, 0, 0.961334, 0, 1, 0, -0.961334, 0, 0.275386, -294.676, 8.16, -579.041)
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="shelbygt500"]
+transform = Transform3D(1, 0, 5.96046e-08, 0, 1, 0, -5.96046e-08, 0, 1, 0, 0, 0)
+stream = ExtResource("5_fmvky")
+attenuation_model = 3
+autoplay = true
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(-0.165185, 0, -0.986263, 0, 1, 0, 0.986263, 0, -0.165185, -285.617, 14.8015, -569.012)
+texture = ExtResource("5_bs7tf")
+
+[node name="the golden casino" parent="." instance=ExtResource("6_2olcf")]
+transform = Transform3D(-0.962701, 0, -0.270567, 0, 1, 0, 0.270567, 0, -0.962701, 603.009, 13.6408, -205.134)
+
+[node name="Sprite3D" type="Sprite3D" parent="the golden casino"]
+transform = Transform3D(0.101551, 0, -4.42034, 0, 7.97038, 0, -6.96764, 0, -0.0644248, 21.8823, 27.3718, -35.0823)
+texture = ExtResource("7_2uwsa")
+
+[node name="city background" type="Node3D" parent="."]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="city background"]
+transform = Transform3D(24.235, 0, 3.51531, 0, 0.507644, 0, -3.9947, 0, 21.3267, 503.369, 29.7961, -9.05734)
+material_override = SubResource("StandardMaterial3D_y67wj")
+size = Vector3(1, 112.583, 1)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="city background"]
+transform = Transform3D(24.235, 0, 3.51531, 0, 0.507644, 0, -3.9947, 0, 21.3267, 487.561, 29.4846, -70.1789)
+material_override = SubResource("StandardMaterial3D_5yejx")
+size = Vector3(1, 117.844, 1)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="city background"]
+transform = Transform3D(24.235, 0, 3.51531, 0, 0.507644, 0, -3.9947, 0, 21.3267, 474.613, 29.7961, -122.681)
+material_override = SubResource("StandardMaterial3D_y67wj")
+size = Vector3(1, 112.583, 1)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="city background"]
+transform = Transform3D(24.235, 0, 3.51531, 0, 0.507644, 0, -3.9947, 0, 21.3267, 471.39, 29.7961, 8.96953)
+material_override = SubResource("StandardMaterial3D_y67wj")
+size = Vector3(1, 112.583, 1)
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="city background"]
+transform = Transform3D(24.235, 0, 3.51531, 0, 0.507644, 0, -3.9947, 0, 21.3267, 455.582, 29.4846, -52.152)
+material_override = SubResource("StandardMaterial3D_5yejx")
+size = Vector3(1, 117.844, 1)
+
+[node name="CSGBox3D6" type="CSGBox3D" parent="city background"]
+transform = Transform3D(24.235, 0, 3.51531, 0, 0.507644, 0, -3.9947, 0, 21.3267, 442.634, 29.7961, -104.654)
+material_override = SubResource("StandardMaterial3D_y67wj")
+size = Vector3(1, 112.583, 1)
+
+[node name="CSGBox3D7" type="CSGBox3D" parent="city background"]
+transform = Transform3D(24.235, 0, 3.51531, 0, 0.507644, 0, -3.9947, 0, 21.3267, 426.401, 29.7961, 36.0928)
+material_override = SubResource("StandardMaterial3D_y67wj")
+size = Vector3(1, 112.583, 1)
+
+[node name="CSGBox3D8" type="CSGBox3D" parent="city background"]
+transform = Transform3D(24.235, 0, 3.51531, 0, 0.507644, 0, -3.9947, 0, 21.3267, 410.594, 29.4846, -25.0287)
+material_override = SubResource("StandardMaterial3D_5yejx")
+size = Vector3(1, 117.844, 1)
+
+[node name="CSGBox3D9" type="CSGBox3D" parent="city background"]
+transform = Transform3D(24.235, 0, 3.51531, 0, 0.507644, 0, -3.9947, 0, 21.3267, 397.645, 29.7961, -77.5308)
+material_override = SubResource("StandardMaterial3D_y67wj")
+size = Vector3(1, 112.583, 1)
+
+[node name="CSGBox3D10" type="CSGBox3D" parent="city background"]
+transform = Transform3D(24.235, 0, 3.51531, 0, 0.507644, 0, -3.9947, 0, 21.3267, 371.524, 29.7961, 36.0928)
+material_override = SubResource("StandardMaterial3D_y67wj")
+size = Vector3(1, 112.583, 1)
+
+[node name="CSGBox3D11" type="CSGBox3D" parent="city background"]
+transform = Transform3D(24.235, 0, 3.51531, 0, 0.507644, 0, -3.9947, 0, 21.3267, 355.716, 29.4846, -25.0287)
+material_override = SubResource("StandardMaterial3D_5yejx")
+size = Vector3(1, 117.844, 1)
+
+[node name="CSGBox3D12" type="CSGBox3D" parent="city background"]
+transform = Transform3D(24.235, 0, 3.51531, 0, 0.507644, 0, -3.9947, 0, 21.3267, 342.768, 29.7961, -77.5308)
+material_override = SubResource("StandardMaterial3D_y67wj")
+size = Vector3(1, 112.583, 1)
+
+[node name="CSGBox3D13" type="CSGBox3D" parent="city background"]
+transform = Transform3D(24.235, 0, 3.51531, 0, 0.507644, 0, -3.9947, 0, 21.3267, 282.066, 29.2744, 32.2338)
+material_override = SubResource("StandardMaterial3D_y67wj")
+size = Vector3(1, 112.583, 1)
+
+[node name="CSGBox3D14" type="CSGBox3D" parent="city background"]
+transform = Transform3D(24.235, 0, 3.51531, 0, 0.507644, 0, -3.9947, 0, 21.3267, 266.258, 28.9629, -28.8877)
+material_override = SubResource("StandardMaterial3D_5yejx")
+size = Vector3(1, 117.844, 1)
+
+[node name="CSGBox3D15" type="CSGBox3D" parent="city background"]
+transform = Transform3D(24.235, 0, 3.51531, 0, 0.507644, 0, -3.9947, 0, 21.3267, 253.31, 29.2744, -81.3898)
+material_override = SubResource("StandardMaterial3D_y67wj")
+size = Vector3(1, 112.583, 1)
+
+[node name="CSGBox3D16" type="CSGBox3D" parent="city background"]
+transform = Transform3D(24.235, 0, 3.51531, 0, 0.507644, 0, -3.9947, 0, 21.3267, 250.087, 29.2744, 50.2607)
+material_override = SubResource("StandardMaterial3D_y67wj")
+size = Vector3(1, 112.583, 1)
+
+[node name="CSGBox3D17" type="CSGBox3D" parent="city background"]
+transform = Transform3D(24.235, 0, 3.51531, 0, 0.507644, 0, -3.9947, 0, 21.3267, 234.279, 28.9629, -10.8609)
+material_override = SubResource("StandardMaterial3D_5yejx")
+size = Vector3(1, 117.844, 1)
+
+[node name="CSGBox3D18" type="CSGBox3D" parent="city background"]
+transform = Transform3D(24.235, 0, 3.51531, 0, 0.507644, 0, -3.9947, 0, 21.3267, 221.33, 29.2744, -63.3629)
+material_override = SubResource("StandardMaterial3D_y67wj")
+size = Vector3(1, 112.583, 1)
+
+[node name="CSGBox3D19" type="CSGBox3D" parent="city background"]
+transform = Transform3D(24.235, 0, 3.51531, 0, 0.507644, 0, -3.9947, 0, 21.3267, 205.098, 29.2744, 77.3839)
+material_override = SubResource("StandardMaterial3D_y67wj")
+size = Vector3(1, 112.583, 1)
+
+[node name="CSGBox3D20" type="CSGBox3D" parent="city background"]
+transform = Transform3D(24.235, 0, 3.51531, 0, 0.507644, 0, -3.9947, 0, 21.3267, 189.29, 28.9629, 16.2624)
+material_override = SubResource("StandardMaterial3D_5yejx")
+size = Vector3(1, 117.844, 1)
+
+[node name="CSGBox3D21" type="CSGBox3D" parent="city background"]
+transform = Transform3D(24.235, 0, 3.51531, 0, 0.507644, 0, -3.9947, 0, 21.3267, 176.342, 29.2744, -36.2397)
+material_override = SubResource("StandardMaterial3D_y67wj")
+size = Vector3(1, 112.583, 1)
+
+[node name="CSGBox3D22" type="CSGBox3D" parent="city background"]
+transform = Transform3D(24.235, 0, 3.51531, 0, 0.507644, 0, -3.9947, 0, 21.3267, 150.221, 29.2744, 77.3839)
+material_override = SubResource("StandardMaterial3D_y67wj")
+size = Vector3(1, 112.583, 1)
+
+[node name="CSGBox3D23" type="CSGBox3D" parent="city background"]
+transform = Transform3D(24.235, 0, 3.51531, 0, 0.507644, 0, -3.9947, 0, 21.3267, 134.413, 28.9629, 16.2624)
+material_override = SubResource("StandardMaterial3D_5yejx")
+size = Vector3(1, 117.844, 1)
+
+[node name="CSGBox3D24" type="CSGBox3D" parent="city background"]
+transform = Transform3D(24.235, 0, 3.51531, 0, 0.507644, 0, -3.9947, 0, 21.3267, 121.465, 29.2744, -36.2397)
+material_override = SubResource("StandardMaterial3D_y67wj")
+size = Vector3(1, 112.583, 1)
+
+[node name="CSGBox3D25" type="CSGBox3D" parent="city background"]
+transform = Transform3D(24.235, 0, 3.51531, 0, 0.507644, 0, -3.9947, 0, 21.3267, 81.816, 34.3644, 79.7828)
+material_override = SubResource("StandardMaterial3D_y67wj")
+size = Vector3(1, 112.583, 1)
+
+[node name="CSGBox3D26" type="CSGBox3D" parent="city background"]
+transform = Transform3D(24.235, 0, 3.51531, 0, 0.507644, 0, -3.9947, 0, 21.3267, 66.008, 34.053, 18.6613)
+material_override = SubResource("StandardMaterial3D_5yejx")
+size = Vector3(1, 117.844, 1)
+
+[node name="CSGBox3D27" type="CSGBox3D" parent="city background"]
+transform = Transform3D(24.235, 0, 3.51531, 0, 0.507644, 0, -3.9947, 0, 21.3267, 53.0599, 34.3644, -33.8408)
+material_override = SubResource("StandardMaterial3D_y67wj")
+size = Vector3(1, 112.583, 1)
+
+[node name="CSGBox3D28" type="CSGBox3D" parent="city background"]
+transform = Transform3D(24.235, 0, 3.51531, 0, 0.507644, 0, -3.9947, 0, 21.3267, 49.8366, 34.3644, 97.8096)
+material_override = SubResource("StandardMaterial3D_y67wj")
+size = Vector3(1, 112.583, 1)
+
+[node name="CSGBox3D29" type="CSGBox3D" parent="city background"]
+transform = Transform3D(24.235, 0, 3.51531, 0, 0.507644, 0, -3.9947, 0, 21.3267, 34.0286, 34.053, 36.6881)
+material_override = SubResource("StandardMaterial3D_5yejx")
+size = Vector3(1, 117.844, 1)
+
+[node name="CSGBox3D30" type="CSGBox3D" parent="city background"]
+transform = Transform3D(24.235, 0, 3.51531, 0, 0.507644, 0, -3.9947, 0, 21.3267, 21.0805, 34.3644, -15.8139)
+material_override = SubResource("StandardMaterial3D_y67wj")
+size = Vector3(1, 112.583, 1)
+
+[node name="CSGBox3D31" type="CSGBox3D" parent="city background"]
+transform = Transform3D(24.235, 0, 3.51531, 0, 0.507644, 0, -3.9947, 0, 21.3267, 4.8483, 34.3644, 124.933)
+material_override = SubResource("StandardMaterial3D_y67wj")
+size = Vector3(1, 112.583, 1)
+
+[node name="CSGBox3D32" type="CSGBox3D" parent="city background"]
+transform = Transform3D(24.235, 0, 3.51531, 0, 0.507644, 0, -3.9947, 0, 21.3267, -10.9597, 34.053, 63.8114)
+material_override = SubResource("StandardMaterial3D_5yejx")
+size = Vector3(1, 117.844, 1)
+
+[node name="CSGBox3D33" type="CSGBox3D" parent="city background"]
+transform = Transform3D(24.235, 0, 3.51531, 0, 0.507644, 0, -3.9947, 0, 21.3267, -23.9078, 34.3644, 11.3093)
+material_override = SubResource("StandardMaterial3D_y67wj")
+size = Vector3(1, 112.583, 1)
+
+[node name="CSGBox3D34" type="CSGBox3D" parent="city background"]
+transform = Transform3D(24.235, 0, 3.51531, 0, 0.507644, 0, -3.9947, 0, 21.3267, -50.0291, 34.3644, 124.933)
+material_override = SubResource("StandardMaterial3D_y67wj")
+size = Vector3(1, 112.583, 1)
+
+[node name="CSGBox3D35" type="CSGBox3D" parent="city background"]
+transform = Transform3D(24.235, 0, 3.51531, 0, 0.507644, 0, -3.9947, 0, 21.3267, -65.8371, 34.053, 63.8114)
+material_override = SubResource("StandardMaterial3D_5yejx")
+size = Vector3(1, 117.844, 1)
+
+[node name="CSGBox3D36" type="CSGBox3D" parent="city background"]
+transform = Transform3D(24.235, 0, 3.51531, 0, 0.507644, 0, -3.9947, 0, 21.3267, -78.7852, 34.3644, 11.3093)
+material_override = SubResource("StandardMaterial3D_y67wj")
+size = Vector3(1, 112.583, 1)
+
+[node name="CSGBox3D37" type="CSGBox3D" parent="city background"]
+transform = Transform3D(24.235, 0, 3.51531, 0, 0.507644, 0, -3.9947, 0, 21.3267, 81.816, 26.7203, 259.93)
+material_override = SubResource("StandardMaterial3D_y67wj")
+size = Vector3(1, 112.583, 1)
+
+[node name="CSGBox3D38" type="CSGBox3D" parent="city background"]
+transform = Transform3D(24.235, 0, 3.51531, 0, 0.507644, 0, -3.9947, 0, 21.3267, 66.008, 26.4089, 198.808)
+material_override = SubResource("StandardMaterial3D_5yejx")
+size = Vector3(1, 117.844, 1)
+
+[node name="CSGBox3D39" type="CSGBox3D" parent="city background"]
+transform = Transform3D(24.235, 0, 3.51531, 0, 0.507644, 0, -3.9947, 0, 21.3267, 53.0599, 26.7203, 146.306)
+material_override = SubResource("StandardMaterial3D_y67wj")
+size = Vector3(1, 112.583, 1)
+
+[node name="CSGBox3D40" type="CSGBox3D" parent="city background"]
+transform = Transform3D(24.235, 0, 3.51531, 0, 0.507644, 0, -3.9947, 0, 21.3267, 49.8366, 26.7203, 277.956)
+material_override = SubResource("StandardMaterial3D_y67wj")
+size = Vector3(1, 112.583, 1)
+
+[node name="CSGBox3D41" type="CSGBox3D" parent="city background"]
+transform = Transform3D(24.235, 0, 3.51531, 0, 0.507644, 0, -3.9947, 0, 21.3267, 34.0286, 26.4089, 216.835)
+material_override = SubResource("StandardMaterial3D_5yejx")
+size = Vector3(1, 117.844, 1)
+
+[node name="CSGBox3D42" type="CSGBox3D" parent="city background"]
+transform = Transform3D(24.235, 0, 3.51531, 0, 0.507644, 0, -3.9947, 0, 21.3267, 21.0805, 26.7203, 164.333)
+material_override = SubResource("StandardMaterial3D_y67wj")
+size = Vector3(1, 112.583, 1)
+
+[node name="CSGBox3D43" type="CSGBox3D" parent="city background"]
+transform = Transform3D(24.235, 0, 3.51531, 0, 0.507644, 0, -3.9947, 0, 21.3267, 4.8483, 26.7203, 305.08)
+material_override = SubResource("StandardMaterial3D_y67wj")
+size = Vector3(1, 112.583, 1)
+
+[node name="CSGBox3D44" type="CSGBox3D" parent="city background"]
+transform = Transform3D(24.235, 0, 3.51531, 0, 0.507644, 0, -3.9947, 0, 21.3267, -10.9597, 26.4089, 243.958)
+material_override = SubResource("StandardMaterial3D_5yejx")
+size = Vector3(1, 117.844, 1)
+
+[node name="CSGBox3D45" type="CSGBox3D" parent="city background"]
+transform = Transform3D(24.235, 0, 3.51531, 0, 0.507644, 0, -3.9947, 0, 21.3267, -23.9078, 26.7203, 191.456)
+material_override = SubResource("StandardMaterial3D_y67wj")
+size = Vector3(1, 112.583, 1)
+
+[node name="CSGBox3D46" type="CSGBox3D" parent="city background"]
+transform = Transform3D(24.235, 0, 3.51531, 0, 0.507644, 0, -3.9947, 0, 21.3267, -50.0291, 26.7203, 305.08)
+material_override = SubResource("StandardMaterial3D_y67wj")
+size = Vector3(1, 112.583, 1)
+
+[node name="CSGBox3D47" type="CSGBox3D" parent="city background"]
+transform = Transform3D(24.235, 0, 3.51531, 0, 0.507644, 0, -3.9947, 0, 21.3267, -65.8371, 26.4089, 243.958)
+material_override = SubResource("StandardMaterial3D_5yejx")
+size = Vector3(1, 117.844, 1)
+
+[node name="CSGBox3D48" type="CSGBox3D" parent="city background"]
+transform = Transform3D(24.235, 0, 3.51531, 0, 0.507644, 0, -3.9947, 0, 21.3267, -78.7852, 26.7203, 191.456)
+material_override = SubResource("StandardMaterial3D_y67wj")
+size = Vector3(1, 112.583, 1)
+
+[node name="water storage" type="Node3D" parent="."]
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="water storage"]
+transform = Transform3D(50, 0, 0, 0, 50, 0, 0, 0, 50, -146.889, 15.5111, -302)
+material_override = SubResource("StandardMaterial3D_ag1b7")
+
+[node name="CSGSphere3D2" type="CSGSphere3D" parent="water storage"]
+transform = Transform3D(50, 0, 0, 0, 50, 0, 0, 0, 50, -219.516, 15.5111, -302)
+material_override = SubResource("StandardMaterial3D_oe4nn")
+
+[node name="CSGSphere3D3" type="CSGSphere3D" parent="water storage"]
+transform = Transform3D(50, 0, 0, 0, 50, 0, 0, 0, 50, -296.211, 15.5111, -302)
+material_override = SubResource("StandardMaterial3D_re8n2")
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="water storage"]
+transform = Transform3D(-6.858e-08, -1, 0, 1.56893, -4.37114e-08, 0, 0, 0, 4.34902, -233.127, 23.4718, -307.085)
+material_override = SubResource("StandardMaterial3D_nlddu")
+height = 166.0
+
+[node name="CSGCylinder3D3" type="CSGCylinder3D" parent="water storage"]
+transform = Transform3D(-1.24777e-08, -0.282339, 3.49922, 1.56893, -6.78309e-08, 0, 6.74353e-08, 1.52589, 0.647468, -132.59, 22.1386, -357.008)
+material_override = SubResource("StandardMaterial3D_2f1hn")
+height = 93.8988
+
+[node name="CSGCylinder3D4" type="CSGCylinder3D" parent="water storage"]
+transform = Transform3D(-1.24777e-08, -0.282339, 3.49922, 1.56893, -6.78309e-08, 0, 6.74353e-08, 1.52589, 0.647468, -132.59, 18.7973, -357.008)
+material_override = SubResource("StandardMaterial3D_2f1hn")
+height = 93.8988
+
+[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="water storage"]
+transform = Transform3D(-1.56893, 0.000396453, 0, -0.00167051, -0.372345, 0, 0, 0, 1.44769, -114.769, 22.5533, -423.502)
+material_override = SubResource("StandardMaterial3D_hxeut")
+radius = 8.06103
+height = 58.1445
+
+[node name="CSGBox3D" type="CSGBox3D" parent="water storage"]
+transform = Transform3D(30, 0, 0, 0, 9.54631, 0, 0, 0, 30, -295.262, 6.53523, -305.752)
+material_override = SubResource("StandardMaterial3D_slvja")
+size = Vector3(1.8661, 1, 1.80348)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="water storage"]
+transform = Transform3D(30, 0, 0, 0, 9.54631, 0, 0, 0, 30, -219.134, 6.53523, -305.752)
+material_override = SubResource("StandardMaterial3D_slvja")
+size = Vector3(1.8661, 1, 1.80348)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="water storage"]
+transform = Transform3D(30, 0, 0, 0, 9.54631, 0, 0, 0, 30, -145.779, 6.53523, -305.752)
+material_override = SubResource("StandardMaterial3D_slvja")
+size = Vector3(1.8661, 1, 1.80348)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="water storage"]
+transform = Transform3D(30, 0, 0, 0, 9.54631, 0, 0, 0, 30, -113.602, 6.53523, -424.934)
+material_override = SubResource("StandardMaterial3D_slvja")
+size = Vector3(0.959262, 1, 0.901902)
+
+[node name="gas station" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.134674, 1.52588e-05, 1.18396)
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="gas station"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 400.645, 0.493036, 213.616)
+material_override = SubResource("StandardMaterial3D_cniim")
+size = Vector3(37.2628, 2.10363, 45.9771)
+
+[node name="CSGBox3D7" type="CSGBox3D" parent="gas station"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 400.213, 8.63254, 216.326)
+material_overlay = SubResource("StandardMaterial3D_pqolh")
+size = Vector3(37.2628, 2.10363, 11.1318)
+
+[node name="CSGBox3D12" type="CSGBox3D" parent="gas station"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 400.213, 3.53086, 231.831)
+material_override = SubResource("StandardMaterial3D_drgx1")
+size = Vector3(26.1156, 3.24087, 9.37592)
+
+[node name="CSGBox3D8" type="CSGBox3D" parent="gas station"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 412.407, 1.66607, 216.326)
+material_overlay = SubResource("StandardMaterial3D_3s6vw")
+size = Vector3(3.65552, 16.4947, 3.47156)
+
+[node name="CSGBox3D13" type="CSGBox3D" parent="gas station"]
+transform = Transform3D(0.0197769, -0.000724929, -0.999804, -0.00123799, 0.999999, -0.000749534, 0.999804, 0.00125256, 0.019776, 420.765, 2.50279, 194.461)
+material_overlay = SubResource("StandardMaterial3D_jhjtf")
+size = Vector3(3.65552, 16.4947, 0.474661)
+
+[node name="Sprite3D" type="Sprite3D" parent="gas station/CSGBox3D13"]
+transform = Transform3D(1.59929, 6.98492e-10, -3.72529e-09, -6.75209e-09, 1.30098, -1.64255e-09, -6.33299e-08, -2.35741e-09, 1.01164, -0.000473022, 4.58567, -0.265167)
+gi_mode = 0
+flip_h = true
+texture = ExtResource("13_cemj7")
+
+[node name="CSGBox3D9" type="CSGBox3D" parent="gas station"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 387.26, 1.25897, 216.294)
+material_overlay = SubResource("StandardMaterial3D_4pr0o")
+size = Vector3(3.65552, 16.4947, 3.47156)
+
+[node name="CSGBox3D10" type="CSGBox3D" parent="gas station"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 403.335, 3.00005, 216.294)
+material_override = SubResource("StandardMaterial3D_4waa8")
+size = Vector3(2.11869, 2.94922, 0.446319)
+
+[node name="CSGBox3D11" type="CSGBox3D" parent="gas station"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 394.994, 2.97618, 216.294)
+material_override = SubResource("StandardMaterial3D_16qmq")
+size = Vector3(2.11869, 2.94922, 0.446319)
+
+[editable path="the golden casino"]

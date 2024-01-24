@@ -1,0 +1,11 @@
+Model Information:
+* title:	Low Poly Psx Roadblock
+* source:	https://sketchfab.com/3d-models/low-poly-psx-roadblock-3dc96b65ae0c42e881536c2ff983e724
+* author:	SaukrDev (https://sketchfab.com/SaukrDev)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Low Poly Psx Roadblock" (https://sketchfab.com/3d-models/low-poly-psx-roadblock-3dc96b65ae0c42e881536c2ff983e724) by SaukrDev (https://sketchfab.com/SaukrDev) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

@@ -1,0 +1,115 @@
+[gd_scene load_steps=13 format=3 uid="uid://jlwiejlg4bfx"]
+
+[ext_resource type="Script" path="res://Addons/Scripts/menucamrot.gd" id="1_66r5h"]
+[ext_resource type="PackedScene" uid="uid://cjnp60in7mths" path="res://Addons/Models/shelby_xx/shelby remake.glb" id="1_c83ar"]
+[ext_resource type="PackedScene" uid="uid://cv2nv1v11nc2y" path="res://roablock.tscn" id="3_84uhp"]
+[ext_resource type="FontFile" uid="uid://cbsth0hxn6ovh" path="res://Addons/fonts/HelpMe.ttf" id="4_4p3ox"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wmykk"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_t0n0s"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_twdiu"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_l1n6x"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5bsva"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_c8lyq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7jx3j"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_p7ale"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.15616, 0)
+material_override = SubResource("StandardMaterial3D_wmykk")
+size = Vector3(8192, 1, 8192)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-0.980041, -0.193072, 0.0473526, -0.0978118, 0.675698, 0.730661, -0.173066, 0.711446, -0.681097, 0.391075, 4.70791, -6.43731)
+
+[node name="background" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.156345, 0)
+script = ExtResource("1_66r5h")
+
+[node name="shelby remake" parent="background" instance=ExtResource("1_c83ar")]
+transform = Transform3D(0.992955, -0.114311, -0.0311947, 0.118491, 0.957927, 0.261412, 0, -0.263267, 0.964723, -0.819336, 0, -0.918625)
+
+[node name="Plane_002" parent="background/shelby remake" index="2"]
+transform = Transform3D(0.882948, 0, -0.469472, 0, 1, 0, 0.469472, 0, 0.882948, 1.57114, -0.373321, -0.859253)
+
+[node name="Plane_005" parent="background/shelby remake" index="5"]
+transform = Transform3D(0.888785, 0, -0.458324, 0, 1, 0, 0.458324, 0, 0.888785, 1.57114, -0.373321, 0.860779)
+
+[node name="scene" parent="background" instance=ExtResource("3_84uhp")]
+transform = Transform3D(0.213544, 0.10954, 0, -0.10954, 0.213544, 0, 0, 0, 0.24, 1.52107, 0, -2.28952)
+
+[node name="scene2" parent="background" instance=ExtResource("3_84uhp")]
+transform = Transform3D(0.152451, 0.183842, 0.0236793, -0.107104, 0.11239, -0.183023, -0.151286, 0.105691, 0.153434, 2.67795, 1.72043, 1.13846)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="background"]
+transform = Transform3D(1, 0, 0, 0, -0.046967, 0.998896, 0, -0.998896, -0.046967, -0.604788, 3.0674, 0)
+light_energy = 16.0
+light_volumetric_fog_energy = 0.0
+shadow_enabled = true
+spot_range = 9.35375
+spot_angle = 61.6235
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 64
+theme_override_constants/margin_top = 80
+theme_override_constants/margin_right = 64
+theme_override_constants/margin_bottom = 80
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Control/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_fonts/font = ExtResource("4_4p3ox")
+theme_override_font_sizes/font_size = 62
+text = "TREAD"
+
+[node name="play" type="Button" parent="Control/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_t0n0s")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_twdiu")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_l1n6x")
+text = "PLAY"
+
+[node name="quit" type="Button" parent="Control/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_5bsva")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_c8lyq")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_7jx3j")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_p7ale")
+text = "quit
+"
+
+[connection signal="pressed" from="Control/MarginContainer/VBoxContainer/play" to="background" method="_on_play_pressed"]
+[connection signal="pressed" from="Control/MarginContainer/VBoxContainer/quit" to="background" method="_on_quit_pressed"]
+
+[editable path="background/shelby remake"]

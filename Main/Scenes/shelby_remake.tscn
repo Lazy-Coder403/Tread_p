@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://c6nx2mstsslm4"]
+
+[node name="shelby remake"]
+transform = Transform3D(1, 0, 0, 0, 0.993083, 0.117416, 0, -0.117416, 0.993083, 0, 0, 0)
+metadata/_edit_group_ = true
+
+[node name="body" parent="." index="0"]
+transform = Transform3D(0.998955, 0.04568, 0.00170215, -0.0457117, 0.998262, 0.0371978, -1.39698e-09, -0.0372367, 0.999307, 0.0624216, 0.130414, 0)
+
+[node name="Plane_001" parent="." index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.29445, 1.86265e-09, -0.0570462)
+
+[node name="Plane_002" parent="." index="2"]
+transform = Transform3D(0.909787, 0, -0.415074, 0, 1, 0, 0.415074, 0, 0.909788, 1.57113, -0.373321, -0.859229)
+
+[node name="Plane_005" parent="." index="5"]
+transform = Transform3D(0.752898, 0, -0.658138, 0, 1, 7.45058e-09, 0.658138, 0, 0.752898, 1.57113, -0.373321, 0.860772)

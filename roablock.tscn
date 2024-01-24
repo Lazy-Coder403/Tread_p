@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=3 uid="uid://cv2nv1v11nc2y"]
+
+[ext_resource type="PackedScene" uid="uid://bbutmt7q6fu4w" path="res://Addons/Models/scene.gltf" id="1_3v6bg"]
+[ext_resource type="Texture2D" uid="uid://c1vh8w61fgxio" path="res://Addons/Models/Material_baseColor.png" id="2_524ed"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0r808"]
+albedo_texture = ExtResource("2_524ed")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_scb4n"]
+albedo_texture = ExtResource("2_524ed")
+
+[node name="scene" instance=ExtResource("1_3v6bg")]
+
+[node name="Cube_Material_0" parent="Sketchfab_model/da667660fc444330bcf5315e08c57218_fbx/RootNode/Cube" index="0"]
+material_override = SubResource("StandardMaterial3D_0r808")
+
+[node name="Cube_001_Material_003_0" parent="Sketchfab_model/da667660fc444330bcf5315e08c57218_fbx/RootNode/Cube_001" index="0"]
+material_override = SubResource("StandardMaterial3D_scb4n")
