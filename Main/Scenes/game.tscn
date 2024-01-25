@@ -69,4 +69,4 @@ shape = SubResource("ConcavePolygonShape3D_ox44e")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -126.544, -9.53674e-07, 24.0633)
 
 [node name="shelbygt500" parent="." instance=ExtResource("4_6rqvk")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -222.62, 4.61193, 7.45227)
+transform = Transform3D(0.275386, 0, 0.961334, 0, 1, 0, -0.961334, 0, 0.275386, -286.762, 6.18457, -583.19)

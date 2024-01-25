@@ -7,6 +7,7 @@ extends VehicleBody3D
 @onready var front_camera = $Camera_pivot/Front_Camera
 @onready var reverse_camera = $Camera_pivot/Reverse_Camera
 
+
 var default_view
 var default_axis_x = 0.0
 var default_steer_rate = 2.25
