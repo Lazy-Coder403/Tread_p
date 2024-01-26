@@ -1,9 +1,10 @@
-[gd_scene load_steps=13 format=3 uid="uid://jlwiejlg4bfx"]
+[gd_scene load_steps=14 format=3 uid="uid://jlwiejlg4bfx"]
 
 [ext_resource type="Script" path="res://Addons/Scripts/menucamrot.gd" id="1_66r5h"]
 [ext_resource type="PackedScene" uid="uid://cjnp60in7mths" path="res://Addons/Models/shelby_xx/shelby remake.glb" id="1_c83ar"]
 [ext_resource type="PackedScene" uid="uid://cv2nv1v11nc2y" path="res://roablock.tscn" id="3_84uhp"]
 [ext_resource type="FontFile" uid="uid://cbsth0hxn6ovh" path="res://Addons/fonts/HelpMe.ttf" id="4_4p3ox"]
+[ext_resource type="AudioStream" uid="uid://6715hsrsrtnh" path="res://Addons/music/Menu_Theme.mp3" id="5_btwne"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wmykk"]
 albedo_color = Color(0, 0, 0, 1)
@@ -22,14 +23,14 @@ albedo_color = Color(0, 0, 0, 1)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_p7ale"]
 
-[node name="Node3D" type="Node3D"]
+[node name="Menu" type="Node3D"]
 
-[node name="CSGBox3D" type="CSGBox3D" parent="."]
+[node name="Floor" type="CSGBox3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.15616, 0)
 material_override = SubResource("StandardMaterial3D_wmykk")
 size = Vector3(8192, 1, 8192)
 
-[node name="Camera3D" type="Camera3D" parent="."]
+[node name="Camera" type="Camera3D" parent="."]
 transform = Transform3D(-0.980041, -0.193072, 0.0473526, -0.0978118, 0.675698, 0.730661, -0.173066, 0.711446, -0.681097, 0.391075, 4.70791, -6.43731)
 
 [node name="background" type="Node3D" parent="."]
@@ -45,10 +46,10 @@ transform = Transform3D(0.882948, 0, -0.469472, 0, 1, 0, 0.469472, 0, 0.882948, 
 [node name="Plane_005" parent="background/shelby remake" index="5"]
 transform = Transform3D(0.888785, 0, -0.458324, 0, 1, 0, 0.458324, 0, 0.888785, 1.57114, -0.373321, 0.860779)
 
-[node name="scene" parent="background" instance=ExtResource("3_84uhp")]
+[node name="Barrier_1" parent="background" instance=ExtResource("3_84uhp")]
 transform = Transform3D(0.213544, 0.10954, 0, -0.10954, 0.213544, 0, 0, 0, 0.24, 1.52107, 0, -2.28952)
 
-[node name="scene2" parent="background" instance=ExtResource("3_84uhp")]
+[node name="Barrier_2" parent="background" instance=ExtResource("3_84uhp")]
 transform = Transform3D(0.152451, 0.183842, 0.0236793, -0.107104, 0.11239, -0.183023, -0.151286, 0.105691, 0.153434, 2.67795, 1.72043, 1.13846)
 
 [node name="SpotLight3D" type="SpotLight3D" parent="background"]
@@ -96,7 +97,7 @@ theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxEmpty_t0n0s")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_twdiu")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_l1n6x")
-text = "PLAY"
+text = "Start Game"
 
 [node name="quit" type="Button" parent="Control/MarginContainer/VBoxContainer"]
 layout_mode = 2
@@ -106,8 +107,13 @@ theme_override_styles/normal = SubResource("StyleBoxEmpty_5bsva")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_c8lyq")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_7jx3j")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_p7ale")
-text = "quit
+text = "Quit Game
 "
+
+[node name="Music" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("5_btwne")
+autoplay = true
+attenuation_filter_cutoff_hz = 20500.0
 
 [connection signal="pressed" from="Control/MarginContainer/VBoxContainer/play" to="background" method="_on_play_pressed"]
 [connection signal="pressed" from="Control/MarginContainer/VBoxContainer/quit" to="background" method="_on_quit_pressed"]

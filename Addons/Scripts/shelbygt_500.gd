@@ -13,9 +13,14 @@ var default_axis_x = 0.0
 var default_steer_rate = 2.25
 
 func _ready():
-	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	default_view = global_position
 
+func _input(_ev):
+	if Input.is_action_pressed("ui_cancel"):
+		get_tree().change_scene_to_file("res://Main/Scenes/menu.tscn")
+		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+	else:
+		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
 func _physics_process(delta):
 	steering = move_toward(steering, Input.get_axis("ui_right", "ui_left") * max_steer, delta * default_steer_rate)
