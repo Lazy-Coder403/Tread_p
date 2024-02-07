@@ -1,1 +1,1 @@
-Tread is a Racing game prototype.
+Godot 4.0
