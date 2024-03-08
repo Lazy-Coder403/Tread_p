@@ -1,2 +1,1 @@
-Simple Track racing prototype.
-Godot 4.0
+Simple Track racing prototype for Godot 4.0
