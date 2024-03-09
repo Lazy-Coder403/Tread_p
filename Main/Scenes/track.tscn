@@ -33,33 +33,3 @@ path_continuous_u = true
 path_u_distance = 1.0
 path_joined = true
 material = SubResource("StandardMaterial3D_0ytjb")
-
-[node name="OuterWall" type="CSGPolygon3D" parent="Path"]
-visible = false
-use_collision = true
-polygon = PackedVector2Array(0, 4, 0, 0, -1, 0, -1, 4)
-mode = 2
-path_node = NodePath("..")
-path_interval_type = 0
-path_interval = 1.0
-path_simplify_angle = 0.0
-path_rotation = 2
-path_local = false
-path_continuous_u = true
-path_u_distance = 1.0
-path_joined = true
-
-[node name="InnerWall" type="CSGPolygon3D" parent="Path"]
-visible = false
-use_collision = true
-polygon = PackedVector2Array(24, 4, 24, 0, 25, 0, 24, 4)
-mode = 2
-path_node = NodePath("..")
-path_interval_type = 0
-path_interval = 1.0
-path_simplify_angle = 0.0
-path_rotation = 2
-path_local = false
-path_continuous_u = true
-path_u_distance = 1.0
-path_joined = true
