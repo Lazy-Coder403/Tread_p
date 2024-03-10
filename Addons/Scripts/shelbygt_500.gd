@@ -1,6 +1,6 @@
 extends VehicleBody3D
 
-@export var max_steer = 0.8
+@export var max_steer = 0.4
 @export var max_rpm = 300
 
 var default_view
@@ -19,3 +19,9 @@ func _input(_ev):
 func _physics_process(delta):
 	steering = move_toward(steering, Input.get_axis("ui_right", "ui_left") * max_steer, delta * default_steer_rate)
 	engine_force = Input.get_axis("ui_down", "ui_up") * 300
+	if Input.is_action_pressed("ui_down"):
+		$brake_light.show()
+	else:
+		$brake_light.hide()
+		if Input.is_action_pressed("reset"):
+			rotate_x(90)
